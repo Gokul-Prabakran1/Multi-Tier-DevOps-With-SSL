@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "ap-southeast-2"
+  region = "ap-south-1"
 }
 
 resource "aws_vpc" "gokul_vpc" {
@@ -14,7 +14,7 @@ resource "aws_subnet" "gokul_subnet" {
   count = 2
   vpc_id                  = aws_vpc.gokul_vpc.id
   cidr_block              = cidrsubnet(aws_vpc.gokul_vpc.cidr_block, 8, count.index)
-  availability_zone       = element(["ap-southeast-2a", "ap-southeast-2b"], count.index)
+  availability_zone       = element(["ap-south-1a", "ap-south-1b"], count.index)
   map_public_ip_on_launch = true
 
   tags = {
@@ -87,7 +87,7 @@ resource "aws_security_group" "gokul_node_sg" {
 }
 
 resource "aws_eks_cluster" "gokul" {
-  name     = "gokul"  # Cluster name changed to "gokul"
+  name     = "gokul"
   role_arn = aws_iam_role.gokul_cluster_role.arn
 
   vpc_config {
