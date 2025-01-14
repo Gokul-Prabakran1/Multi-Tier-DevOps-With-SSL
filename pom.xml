@@ -75,20 +75,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-
-			<!-- Added OWASP Dependency-Check plugin -->
-			<plugin>
-				<groupId>org.owasp</groupId>
-				<artifactId>dependency-check-maven</artifactId>
-				<version>8.4.0</version> <!-- Check for the latest version -->
-				<executions>
-					<execution>
-						<goals>
-							<goal>check</goal> <!-- Run the dependency check goal -->
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
 
@@ -97,13 +83,6 @@
             <id>maven-releases</id>
             <url>http://3.109.216.6:8081/repository/maven-releases/</url>
         </repository>
-		<repositories>
-        <repository>
-            <id>owasp</id>
-            <url>https://jitpack.io</url>
-        </repository>
-</repositories>
-
         <snapshotRepository>
             <id>maven-snapshots</id>
             <url>http://3.109.216.6:8081/repository/maven-snapshots/</url>
