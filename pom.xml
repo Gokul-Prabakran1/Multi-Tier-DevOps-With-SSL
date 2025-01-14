@@ -80,7 +80,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>dependency-check-maven</artifactId>
-				<version>6.6.0</version> <!-- Check for the latest version -->
+				<version>6.5.0</version> <!-- Check for the latest version -->
 				<executions>
 					<execution>
 						<goals>
