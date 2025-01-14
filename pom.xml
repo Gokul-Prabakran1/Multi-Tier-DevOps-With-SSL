@@ -78,9 +78,9 @@
 
 			<!-- Added OWASP Dependency-Check plugin -->
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
+				<groupId>org.owasp</groupId>
 				<artifactId>dependency-check-maven</artifactId>
-				<version>6.5.0</version> <!-- Check for the latest version -->
+				<version>8.4.0</version> <!-- Check for the latest version -->
 				<executions>
 					<execution>
 						<goals>
@@ -97,6 +97,13 @@
             <id>maven-releases</id>
             <url>http://3.109.216.6:8081/repository/maven-releases/</url>
         </repository>
+		<repositories>
+        <repository>
+            <id>owasp</id>
+            <url>https://jitpack.io</url>
+        </repository>
+</repositories>
+
         <snapshotRepository>
             <id>maven-snapshots</id>
             <url>http://3.109.216.6:8081/repository/maven-snapshots/</url>
