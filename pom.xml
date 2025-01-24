@@ -79,9 +79,9 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.10.1</version> <!-- Ensure compatibility with Java 21 -->
                 <configuration>
-                    <source>17</source>  <!-- Java source version -->
-                    <target>17</target>  <!-- Java target version -->
-                    <release>17</release>  <!-- Compatibility with Java 21 -->
+                    <source>11</source>  <!-- Java source version -->
+                    <target>11</target>  <!-- Java target version -->
+                    <release>11</release>  <!-- Compatibility with Java 21 -->
                 </configuration>
             </plugin>
         </plugins>
