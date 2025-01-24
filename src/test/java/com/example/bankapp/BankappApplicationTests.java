@@ -11,4 +11,3 @@ class BankappApplicationTests {
 	}
 
 }
-password:gokul
