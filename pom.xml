@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>  
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -27,7 +27,7 @@
         <url/>
     </scm>
     <properties>
-        <java.version>21</java.version> <!-- Use Java 21 version here -->
+        <java.version>17</java.version> <!-- Changed from 21 to 17 -->
     </properties>
     <dependencies>
         <dependency>
@@ -67,7 +67,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -75,16 +74,14 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.10.1</version>
-            <configuration>
-                <source>17</source>  <!-- Change this to 17 -->
-                <target>17</target>  <!-- Change this to 17 -->
-            </configuration>
-        </plugin>
-            
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>17</source>  <!-- Now matches java.version -->
+                    <target>17</target>  <!-- Now matches java.version -->
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
 </project>
